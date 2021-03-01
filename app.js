@@ -17,8 +17,8 @@ app.use(express.urlencoded({ extended: true }))
 charactersAPI(app);
 
 mongoose.connect(
-    `mongodb+srv://noctisq:en2VQixW6r7x@J5@cluster0.4qvuc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
-    { dbName: `RickAndMorty` }
+    `mongodb+srv://noctisq:tobeChanged@J5@cluster0.4qvuc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
+    { dbName: `toBeChanged` }
     , () => {
         console.log("connected to db");
 });
