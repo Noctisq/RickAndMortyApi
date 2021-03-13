@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    
+    <title>Rick&Morty</title>
+</head>
+<body>
+    <div class="container">
+        <main>
+         
+      
+          
+            <div class="col-md-7 col-lg-12">
+              <h4 class="mb-3">Add Character</h4>
+              <form id = "formsRick"class="needs-validation" novalidate>
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <label for="firstName" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="characterName" placeholder="" value="" required>
+                   
+                  </div>
+      
+                  <div class="col-sm-6">
+                    <label for="lastName" class="form-label">Status</label>
+                    <input type="text" class="form-control" id="characterStatus" placeholder="" value="" required>
+                   
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="firstName" class="form-label">Species</label>
+                    <input type="text" class="form-control" id="characterSpecies" placeholder="" value="" required>
+                   
+                  </div>
+      
+                  <div class="col-sm-6">
+                    <label for="lastName" class="form-label">Gender</label>
+                    <input type="text" class="form-control" id="characterGender" placeholder="" value="" required>
+                   
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="firstName" class="form-label">Origin Name</label>
+                    <input type="text" class="form-control" id="characterOrigin" placeholder="" value="" required>
+                   
+                  </div>
+      
+                  <div class="col-sm-6">
+                    <label for="lastName" class="form-label">Location Name</label>
+                    <input type="text" class="form-control" id="characterLocation" placeholder="" value="" required>
+                   
+                  </div>
+      
+                 
+                </div>
+      
+                <hr class="my-4">
+      
+                <button class="w-100 btn btn-primary btn-lg" id ="Add" type="button" >Add Character</button>
+              </form>
+            </div>
+          </div>
+        </main>
+      
+       
+      </div>
+    <table style = "margin-top: 50px;"class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">name</th>
+            <th scope="col">status</th>
+            <th scope="col">species</th>
+            <th scope="col">gender</th>
+            <th scope="col">origin name</th>
+            <th scope="col">location name</th>
+          </tr>
+        </thead>
+        <tbody id = "#character">
+          
+        </tbody>
+      </table>
+    
+      <script src="./index.js"></script>
+</body>
+</html>
