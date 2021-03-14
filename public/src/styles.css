@@ -1,0 +1,17 @@
+.sign-in-link{
+    border-radius: 10%;
+    color:  rgb(192, 134, 27);
+    /* font-size: 18px; */
+}
+.sign-in-link:hover{
+    color: rgb(187, 201, 1);
+}
+
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
