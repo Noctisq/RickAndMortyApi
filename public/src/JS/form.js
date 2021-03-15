@@ -1,4 +1,4 @@
-var URL = "http://192.168.0.13:3000/api/Users";
+var URL = "https://bedurickandmorty.herokuapp.com/api/Users";
 
 
 document.getElementById("login").addEventListener('click', async () => {

@@ -1,4 +1,4 @@
-var URL = "http://192.168.0.13:3000/api/Characters";
+var URL = "https://bedurickandmorty.herokuapp.com/api/Characters";
 
 
 (async function () {
