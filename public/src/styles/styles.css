@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body{
+	background-color: transparent;
+	font-family: 'Roboto', sans-serif;
+}
+
 .sign-in-link{
     border-radius: 10%;
     color:  rgb(192, 134, 27);
@@ -9,7 +16,7 @@
 
 
 footer {
-    position: fixed;
+   
     left: 0;
     bottom: 0;
     width: 100%;

@@ -1,5 +1,5 @@
 const Character = require("../models/CharacterModel")
-class CharacterContronller {
+class CharacterController {
 
     async getAllCharacters() {
         let response = await Character.find({});
@@ -7,25 +7,36 @@ class CharacterContronller {
     }
 
     async createCharacter(character) {
-        console.log(character);
-        
-        //let response = await Character.create({});
-        // return response;
+
+        let response = await Character.create(character);
+        return response;
     }
 
-    async updateCharacter() {
+    async updateCharacter(id, body) {
 
+        const { name, status, species, gender, origin, location } = body;
+        console.log(body)
+        let response = await Character.findOneAndUpdate({ _id: id }, { 
+            name: name,
+            status: status,
+            species: species,
+            gender: gender,
+            origin : { name: origin.name},
+            location: { name: location.name}
+        });
+        console.log(response)
+        return response;
     }
 
-    async deleteCharacter() {
+    async deleteCharacter(id) {
 
+        let response = await Character.deleteOne({ _id: id });
+        console.log(response)
+        return response;
     }
 
-    async getCharacter(id) {
-
-    }
 
 
 }
 
-module.exports = CharacterContronller;
+module.exports = CharacterController;

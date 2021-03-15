@@ -15,17 +15,47 @@ function characterAPI(app) {
     }
   });
 
-  router.post("/Add", async (req) => {
-    try{
-        console.log(req.body);
-        let characterCreated = await characterController.createCharacter();
-        res.send(characterCreated);
-    }catch (err){
-        console.log(err);
+  router.post("/Add", async (req, res) => {
+    try {
+      console.log(req.body);
+      let characterCreated = await characterController.createCharacter(req.body);
+      res.send(characterCreated);
+    } catch (err) {
+      console.log(err);
     }
-  })
+  });
 
-  
+
+  router.put('/:id', async (req, res) => {
+    try {
+
+      let characterUpdated = await characterController.updateCharacter(req.params.id, req.body);
+      res.send(characterUpdated);
+
+    } catch (error) {
+      console.log(
+        error
+      );
+    }
+
+  });
+
+  router.delete('/:id', async (req, res) => {
+    try {
+
+      let characterDeleted = await characterController.deleteCharacter(req.params.id);
+      res.send(characterDeleted);
+
+    } catch (error) {
+      console.log(
+        error
+      );
+    }
+
+
+  });
+
+
 }
 
 module.exports = characterAPI;

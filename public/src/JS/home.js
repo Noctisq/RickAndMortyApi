@@ -1,3 +1,6 @@
+var URL = "http://192.168.0.13:3000/api/Characters";
+
+
 (async function () {
     let response = await fetch(URL)
     let stringRows = '';

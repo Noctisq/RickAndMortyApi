@@ -8,48 +8,38 @@ function usersAPI(app) {
 
 
   //Get ALl users
-  router.get("/", async function (req, res, next) {
+  router.post("/login", async function (req, res, next) {
     try {
-      
+      console.log(req.body);
+      let user = await userController.registerUser(req.body);
+      res.send(user);
     } catch (err) {
-     
+      console.log(err);
     }
   });
 
-  router.post("/Add", async (req) => {
-    try{
-        
-    }catch (err){
-    }
-  })
 
-  router.put("/update", async (req) => {
-    try{
-       
-    }catch (err){
-        
-    }
-  })
+  router.post("/auth", async (req, res) => {
+    try {
+      console.log(req.body);
+      await userController.authUser(req.body, res);
 
-  router.post("/delete", async (req) => {
-    try{
-        
-    }catch (err){
-        
+    } catch (err) {
+
     }
   })
 
 
   router.get("/getOne", async (req) => {
-    try{
-    
-    }catch (err){
-        
+    try {
+
+    } catch (err) {
+
     }
   })
 
 
-  
+
 }
 
 module.exports = usersAPI;

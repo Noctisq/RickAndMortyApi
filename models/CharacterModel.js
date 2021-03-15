@@ -6,7 +6,7 @@ const Schema = mongoose.Schema;
 //crear  esquema de geolocalizacion
 
 const characterSchema = new Schema({
-  id : {type: Number, required: true},
+  
   name: { type: String, required: [true, "Name is required"] },
   status: { type: String, required: [true, "Status is required"] },
   species: { type: String, required: [true, "Specie is required"] },

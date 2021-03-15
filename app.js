@@ -9,21 +9,24 @@ mongoose.set("useUnifiedTopology", true);
 
 
 const charactersAPI = require("./routes/CharacterRoutes");
+const usersAPI = require("./routes/UserRoutes");
 const app = express();
 
-app.use(cors())
-app.use(express.urlencoded({ extended: true }))
+app.use(cors());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 //APIs inicialization
 charactersAPI(app);
+usersAPI(app);
 
 mongoose.connect(
-    `mongodb+srv://noctisq:tobeChanged@J5@cluster0.4qvuc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
-    { dbName: `toBeChanged` }
+    `mongodb+srv://noctisq:en2VQixW6r7x@J5@cluster0.4qvuc.mongodb.net/RickAndMorty?retryWrites=true&w=majority`
     , () => {
         console.log("connected to db");
-});
+    });
 
 
-app.listen(3000,  () =>{
+app.listen(3000, () => {
     console.log("Escuchando peticiones en el puerto:", 3000);
 });
