@@ -79,6 +79,12 @@ const createCharacter = async (character) => {
     <td><button data-bs-toggle="modal" data-bs-target="#exampleModal" id="${characterToPrint._id}">editar</button> <button id="${characterToPrint._id}">borrar</button></td>
     </tr>`
     parent.append(childtoAppend);
+    document.querySelector("#characterName").value = "";
+    document.querySelector("#characterStatus").value = "";
+    document.querySelector("#characterSpecies").value = "";
+    document.querySelector("#characterGender").value = "";
+    document.querySelector("#characterOrigin").value = "";
+    document.querySelector("#characterLocation").value = "";
     initCharacters();
 
 }
@@ -130,7 +136,7 @@ document.getElementById("#character").addEventListener('click', async (e) => {
                 body: JSON.stringify(character)
             });
 
-            initCharacters();
+
             document.querySelector("#characterName").value = "";
             document.querySelector("#characterStatus").value = "";
             document.querySelector("#characterSpecies").value = "";
@@ -142,6 +148,7 @@ document.getElementById("#character").addEventListener('click', async (e) => {
             document.getElementById('Edit').id = 'Add';
             document.getElementById("Add").addEventListener('click', createListener);
 
+            initCharacters();
         });
 
 
